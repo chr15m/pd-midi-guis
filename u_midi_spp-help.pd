@@ -1,0 +1,14 @@
+#N canvas 642 1235 450 300 10;
+#X text 11 10 Listen out for MIDI "song position pointer" messages.
+;
+#X obj 222 85 list prepend set;
+#X obj 222 107 list trim;
+#X floatatom 165 86 5 0 0 0 - - -, f 5;
+#X text 58 86 song position ->;
+#X obj 165 64 u_midi_spp;
+#X text 233 68 <- raw output;
+#X msg 222 129;
+#X connect 1 0 2 0;
+#X connect 2 0 7 0;
+#X connect 5 0 3 0;
+#X connect 5 1 1 0;

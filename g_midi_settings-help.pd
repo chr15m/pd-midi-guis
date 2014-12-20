@@ -1,4 +1,4 @@
-#N canvas 445 89 450 300 10;
+#N canvas 444 84 450 300 10;
 #X text 37 27 save learned midi controller settings ->;
 #X obj 201 153 g_midi_toggle zipzap;
 #X obj 201 112 g_midi_slider billy;
@@ -7,3 +7,7 @@
 #X text 57 115 g_midi_slider billy ->;
 #X text 51 198 g_midi_button zipzap ->;
 #X obj 296 12 g_midi_settings;
+#X text 69 242 g_midi_radio yo 7 ->;
+#X text 289 156 (midi button toggles);
+#X text 290 201 (midi button presses);
+#X obj 201 238 g_midi_radio yo 7;

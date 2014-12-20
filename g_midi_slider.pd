@@ -1,10 +1,10 @@
-#N canvas 233 335 346 105 10;
-#X obj 6 6 hsl 128 15 0 127 0 0 \$0/value \$1/r empty -2 -8 0 10 -260097
--1 -1 5900 1;
-#X obj 140 6 tgl 15 0 \$0/learn \$1/pd-midi-gui/learn learn 17 7 0
-10 -191407 -1 -1 0 1;
+#N canvas 230 320 346 105 10;
+#X obj 60 5 hsl 128 15 0 127 0 0 \$0/value \$1/r empty -2 -8 0 10 -260097
+-1 -1 0 1;
+#X obj 6 5 tgl 15 0 \$0/learn \$1/pd-midi-gui/learn learn 17 7 0 10
+-191407 -1 -1 0 1;
 #X text 206 2 args: name;
 #X obj 13 40 u_midi_learn \$1 slider \$0;
 #X obj 13 62 s \$1/r;
 #X connect 3 0 4 0;
-#X coords 0 -1 1 1 190 25 2 0 0;
+#X coords 0 -1 1 1 195 25 2 0 0;

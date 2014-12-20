@@ -1,0 +1,43 @@
+#N canvas 896 121 450 300 10;
+#X obj 6 5 tgl 15 0 \$0/learn \$1/pd-midi-gui/learn learn 17 7 0 10
+-191407 -1 -1 0 1;
+#X obj 13 40 u_midi_learn \$1 slider \$0;
+#X obj 13 106 s \$1/r;
+#X text 206 2 args: name size;
+#X obj 62 5 hradio 16 1 0 7 \$0/value \$1/r empty 0 -8 0 10 -260097
+-1 -1 2;
+#X obj 210 38 namecanvas \$0/midiradio;
+#N canvas 2 48 450 372 init 0;
+#X obj 19 14 loadbang;
+#X obj 19 36 \$2;
+#X obj 19 58 sel bang;
+#X msg 19 80 3;
+#X msg 19 292 \; \$1 number \$2;
+#X obj 19 270 list prepend \$1/r;
+#X obj 38 166 * 16;
+#X obj 38 210 list prepend \$0/midiradio;
+#X msg 38 232 \; \$1 donecanvasdialog 1 -1 2 0 -1 \$2 25 \$2 25 0 0
+;
+#X obj 38 188 + 68;
+#X obj 19 102 t f f f;
+#X obj 58 126 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 10 0;
+#X connect 3 0 10 0;
+#X connect 5 0 4 0;
+#X connect 6 0 9 0;
+#X connect 7 0 8 0;
+#X connect 9 0 7 0;
+#X connect 10 0 5 0;
+#X connect 10 1 6 0;
+#X connect 10 2 11 0;
+#X restore 58 62 pd init;
+#X obj 13 62 / 127;
+#X obj 13 84 * \$2;
+#X connect 1 0 7 0;
+#X connect 6 0 8 1;
+#X connect 7 0 8 0;
+#X connect 8 0 2 0;
+#X coords 0 -1 180 25 180 25 2 0 0;
